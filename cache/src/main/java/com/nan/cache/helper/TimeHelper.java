@@ -10,6 +10,16 @@ public final class TimeHelper {
         throw CacheException.of("No instances!");
     }
 
+    public static boolean isSameMinute(long time1, long time2) {
+        Calendar calendar1 = getCalendar(time1);
+        Calendar calendar2 = getCalendar(time2);
+        return calendar1.get(Calendar.YEAR) == calendar2.get(Calendar.YEAR)
+                && calendar1.get(Calendar.MONTH) == calendar2.get(Calendar.MONTH)
+                && calendar1.get(Calendar.DAY_OF_MONTH) == calendar2.get(Calendar.DAY_OF_MONTH)
+                && calendar1.get(Calendar.HOUR_OF_DAY) == calendar2.get(Calendar.HOUR_OF_DAY)
+                && calendar1.get(Calendar.MINUTE) == calendar2.get(Calendar.MINUTE);
+    }
+
     public static boolean isSameHour(long time1, long time2) {
         Calendar calendar1 = getCalendar(time1);
         Calendar calendar2 = getCalendar(time2);

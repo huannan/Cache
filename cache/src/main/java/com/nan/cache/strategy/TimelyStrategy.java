@@ -20,6 +20,9 @@ public class TimelyStrategy extends BaseStrategy {
         long nowTime = System.currentTimeMillis();
         TimeUnit timeUnit = getTimeUnit();
         switch (timeUnit) {
+            case MINUTES:
+                isCacheValid = TimeHelper.isSameMinute(saveTime, nowTime);
+                break;
             case HOURS:
                 isCacheValid = TimeHelper.isSameHour(saveTime, nowTime);
                 break;
