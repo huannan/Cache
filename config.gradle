@@ -16,6 +16,7 @@ build_versions.min_sdk = 21
 build_versions.target_sdk = 30
 build_versions.compile_sdk = 30
 build_versions.android_gradle_plugin = "4.0.2"
+build_versions.android_maven_gradle_plugin = "2.1"
 build_versions.build_tools = "30.0.3"
 build_versions.kotlin = "1.4.21"
 // 主模块
