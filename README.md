@@ -118,6 +118,27 @@ public void setCache() {
 }
 ```
 
+### 依赖配置
+
+1.将其添加到项目的根build.gradle中：
+
+```groovy
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+2.添加依赖
+
+```groovy
+dependencies {
+	implementation 'com.github.huannan:Cache:1.0.0'
+}
+```
+
 ### API详细文档
 
 1. 通过@Cache定义一个缓存，其中action有Cache.GET和Cache.PUT两种，分别代表获取和放置缓存；key表示缓存的键
