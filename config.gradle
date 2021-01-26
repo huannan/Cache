@@ -28,7 +28,8 @@ build_versions.cache_version_code = 1000000
 ext.build_versions = build_versions
 
 def addRepos(RepositoryHandler handler) {
-    handler.maven { url 'https://maven.aliyun.com/repository/public/' }
+    handler.maven { url 'https://maven.aliyun.com/repository/public' }
+    handler.maven { url 'https://jitpack.io' }
     handler.flatDir { dir new File(rootProject.rootDir, 'third_libs') }
     handler.jcenter()
     handler.google()
